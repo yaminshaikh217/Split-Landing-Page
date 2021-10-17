@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+/* body {
+  background: #333;
+  height: 100vh;
+} */
+.box {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  width: 50vw;
+  height: 100%;
+  background: url("xbox.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.right {
+  width: 50vw;
+  height: 100%;
+  position: relative;
+  background: url("animal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* overlay******* */
+
+.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(116, 199, 255, 0.2);
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(182, 255, 182, 0.2);
+}
+
+.btn {
+  z-index: 10;
+  margin-bottom: -128px;
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 3px 3px -4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 1rem;
+  background: rgba(116, 199, 255, 0.5);
+  color: #fff;
+}
+
+.btn:hover {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(116, 199, 255, 0.5);
+}
+
+.left.left-split {
+  width: 75vw;
+}
+
+.right.right-split {
+  width: 80vw;
+}
+
+.left,
+.left-split,
+.right,
+right-split {
+  transition: all 0.5s linear;
+}
